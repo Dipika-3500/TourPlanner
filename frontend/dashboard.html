@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Available Doctors</h2>
+
+<button onclick="logout()">Logout</button>
+<button onclick="loadMyBookings()">My Bookings</button>
+
+<div id="doctorList"></div>
+
+<div id="booking" style="display:none;">
+  <h3>Book Appointment</h3>
+  <input type="date" id="date">
+  <select id="slot">
+    <option>10 AM</option>
+    <option>12 PM</option>
+    <option>2 PM</option>
+    <option>4 PM</option>
+  </select>
+  <button onclick="book()">Confirm Booking</button>
+</div>
+
+<script src="app.js"></script>
+<script>
+  loadDoctors();
+</script>
+
+</body>
+</html>
